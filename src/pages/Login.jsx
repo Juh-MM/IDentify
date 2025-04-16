@@ -3,6 +3,10 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import api from "../services/api";
 
+import Styles from "./Login.module.css"; // chamar o css dessa pagina
+import "../global.css"; // chamar o css global
+import { Header } from "../componentes/Header";
+
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -31,28 +35,34 @@ function Login() {
   };
 
   return (
-    <div className="login-container">
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
-        <label>Email:</label>
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
+    <div>
+      <Header /> {/* Chamar o componente (Header) */}
+      <div className={Styles.loginContainer}>
+        
+        <h2>Login</h2>
+        <form onSubmit={handleSubmit} className={Styles.form}>
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+            placeholder="Digite seu E-mail"
+          />
 
-        <label>Senha:</label>
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-
-        <button type="submit">Entrar</button>
-        {erro && <p className="erro">{erro}</p>}
-      </form>
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+            placeholder="Digite sua senha"
+          />
+          <div className={Styles.buttonsArea}>
+            <button type="submit">Entrar</button>
+            {erro && <p className="erro">{erro}</p>}
+          </div>
+        </form>
+      </div>
+      <a href="">Esqueceu sua senha?</a>
     </div>
   );
 }
