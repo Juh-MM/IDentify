@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="css/img/image.png">
+  <title>IDentify</title>
+  <link rel="stylesheet" href="css/index.css">
+
+  <!-- Chart.js para o gráfico -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <!-- Logo -->
+  <div class="logo-container">
+    <img src="css/img/logo.png" class="logo">
+  </div>
+  
+  <!-- Menu lateral -->
+  <div class="menu-lateral">
+    <a href="#"><img src="css/img/home.png" class="icone" alt="Início">Início</a>
+    <a href="#"><img src="css/img/file.png" class="icone" alt="Caso Novo">Caso Novo</a>
+    <a href="#"><img src="css/img/folder.png" class="icone" alt="Projetos">Casos</a>
+  </div>
+
+  <!-- Retângulo de fundo -->
+<div class="retangulo-fundo">
+  <div class="dashboard">
+    <div class="card">
+      <h1>Casos Concluídos vs Não Concluídos</h1>
+      <div class="grafico">
+        <canvas id="graficoCasos" width="400" height="200"></canvas>
+      </div>
+      <span class="badge">Baseado nos dados de casos</span>
+    </div>
+    
+    <div class="card">
+      <h1>Acertos em Comparações</h1>
+      <div class="grafico">
+        <canvas id="graficoSimilaridade" width="300" height="300"></canvas>
+      </div>
+      <span class="badge">Baseado em dados da plataforma</span>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Painel superior com busca e perfil -->
+  <div class="painel-flutuante">
+    <div class="painel-conteudo">
+      <div class="search-bloco">
+        <input type="text" placeholder="Buscar casos...">
+        <span class="icone-filtro">
+          <img src="css/img/filtro.png" alt ="Filtro" class="img-filtro">
+        </span>
+      </div>
+  
+      <div class="perfil-bloco">
+        <img src="css/img/foto.png" alt="Perfil" class="icone-perfil">
+        <div class="info">
+          <span class="nome">João Silva</span>
+          <span class="cargo">Administrador</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Script separado -->
+  <script src="js/script.js"></script>
+
+</body>
+</html>
