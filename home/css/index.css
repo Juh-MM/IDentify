@@ -1,0 +1,241 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: #F1EFEC;
+}
+
+.menu-lateral {
+  position: fixed;
+  top: 55%;
+  left:15px; /* 2cm da borda esquerda */
+  transform: translateY(-50%);
+  background-color: #D4C9BE;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #123458;
+  display: flex;
+  flex-direction: column; /* links em coluna */
+  align-items: center;     /* Centraliza horizontalmente */
+  justify-content: center; /* Centraliza verticalmente */
+  gap: 25px;
+  height: 65vh;            /* Altura de 65% da tela */
+  width: 80x;
+}
+
+.menu-lateral a {
+  display: flex;
+  flex-direction: column;  /* ícone em cima, texto embaixo (se quiser lado a lado, troque para "row") */
+  align-items: center;
+  gap: 3px;
+  padding: 15px;
+  background-color: #f1efec8e;
+  color: #123458;
+  text-decoration: none;
+  border-radius: 10px;
+  width: 50%;
+  text-align: center;
+}
+
+.menu-lateral a:hover {
+  background-color: #F1EFEC;
+}
+
+.menu-lateral img.icone {
+  width: 40px;
+  height: 40px;
+}
+
+.painel-flutuante {
+  position: fixed;
+  top: 45px; /* Afastado 150px do topo */
+  left:5cm; /* Afastado 8cm da esquerda */
+  transform: translateY(-50%);
+  background-color: #D4C9BE;
+  padding: 19px;
+  border-radius: 10px;
+  border: 1px solid #123458;
+  color: #F1EFEC;
+  width: 900px; /* Largura do painel */
+  display: flex;
+  justify-content: space-between; /* Espaça a barra de pesquisa e o perfil */
+  align-items: center; /* Alinha verticalmente os itens */
+  height: 40px;
+}
+
+.painel-conteudo {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Espaço entre os itens */
+  width: 100%;
+}
+
+.search-bloco {
+  position: fixed;
+  border-radius: 10px;
+  width: 70%; /* A barra de pesquisa ocupa 70% da largura do painel */
+}
+
+.search-bloco input {
+  padding: 10px 40px 10px 15px; /* Padding para o ícone de filtro à direita */
+  border-radius: 5px;
+  border: none;
+  width: 95%; /* Faz a barra de pesquisa se ajustar ao tamanho do painel */
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #123458;
+  background-color: #f1efec8e;;
+  color: #123458;
+}
+
+.search-bloco input::placeholder {
+  color: #123458;
+}
+
+/* Estilo do ícone de filtro (agora uma imagem) */
+.icone-filtro {
+  position: absolute;
+  right: 10px; /* Posiciona a imagem à direita dentro do input */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.img-filtro {
+  width: 30px; /* Ajuste o tamanho conforme necessário */
+  height: 30px;
+}
+
+.perfil-bloco {
+  display: flex;
+  align-items: left;
+  gap: 10px;
+  text-align: left;
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.icone-perfil {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #123458;
+}
+
+.nome {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.cargo {
+  font-size: 14px;
+  color: #123458;
+}
+
+
+.logo-container {
+  position: fixed;
+  top: 30px;        /* Ajuste a distância do topo */
+  left: 20px;      /* Distância entre o menu e o painel (ajuste se necessário) */
+  z-index: 10;
+}
+
+.logo {
+  height: 36px;     /* Tamanho da logo */
+  width: 130px;
+}
+
+
+
+.retangulo-fundo {
+  position: absolute;
+  top: 110px;                  /* Ajuste para deixar espaço pro painel */
+  left: 188px;                   /* Mesmo left do painel-flutuante */
+  width: 938px;
+  min-height: 71vh;           /* Altura mínima de 71% da tela */
+  background-color: #D4C9BE;
+  border-radius: 10px;
+  border: 1px solid #123458;
+  z-index: 0;
+  padding: 20px;              /* Espaço interno opcional */
+  box-sizing: border-box;
+}
+
+
+.dashboard {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 20px;
+  box-sizing: border-box;
+  color: #123458;
+}
+
+.card {
+  background-color: #f1efec;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #123458;
+  flex: 1 1 260px;
+  min-width: 260px;
+  max-width: 300px;
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+.badge {
+  display: inline-block;
+  padding: 5px 10px;
+  margin-top: 10px;
+  background-color: #c8d6e5;
+  border-radius: 20px;
+  font-size: 12px;
+  color: #123458;
+}
+
+.badge.danger {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+
+
+.graficos-container {
+  display: flex; /* Usando flexbox para alinhamento horizontal */
+  justify-content: space-between; /* Garante que os gráficos fiquem com espaço entre si */
+  gap: 20px; /* Espaço entre os gráficos */
+  padding: 20px;
+}
+
+.grafico {
+  flex: 100%;; /* Faz com que os gráficos ocupem o mesmo espaço disponível */
+  display: flex;
+  justify-content: center; /* Alinha os gráficos no centro do contêiner */
+  align-items: center; /* Alinha os gráficos verticalmente */
+  max-width: 75%; /* Limita a largura máxima de cada gráfico */
+}
+
+canvas {
+  width: 100% !important; /* Faz com que o gráfico ocupe a largura total do contêiner */
+  height: 150px !important; /* Ajuste a altura conforme necessário */
+}
+
+#graficoSimilaridade {
+  width: 280px !important;
+  height: 280px !important;
+}
+
+
+
+
+
+
