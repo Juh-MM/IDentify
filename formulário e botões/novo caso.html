@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="css/img/image.png">
+  <title>IDentify</title>
+  <link rel="stylesheet" href="css/novo caso.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+  <div class="logo-container">
+    <img src="css/img/logo.png" class="logo">
+  </div>
+
+  <div class="menu-lateral">
+    <a href="#"><img src="css/img/home.png" class="icone" alt="Início">Início</a>
+    <a href="#"><img src="css/img/file.png" class="icone" alt="Caso Novo">Caso Novo</a>
+    <a href="#"><img src="css/img/folder.png" class="icone" alt="Projetos">Casos</a>
+  </div>
+<div class="retangulo-fundo">
+    <div class="ficha-caso">
+      <div class="cabecalho">
+        <div class="campo">
+          <label for="titulo">Título:</label>
+          <input type="text" id="titulo" placeholder="Caso 1" required>
+        </div>
+        <div class="campo">
+          <label for="codigo">Código:</label>
+          <input type="text" id="codigo" placeholder="26783651" required>
+        </div>
+        <div class="campo">
+          <label for="perito">Perito:</label>
+          <input type="text" id="perito" placeholder="José" required>
+        </div>
+        <div class="campo">
+          <label for="status">Status:</label>
+          <input type="text" id="status" placeholder="Em andamento ou concluído" required>
+        </div>
+        <div class="campo">
+          <label for="data-ocorrencia">Data de ocorrência:</label>
+          <input type="text" id="data-ocorrencia" placeholder="20/02/2025" required>
+        </div>
+        <div class="campo">
+          <label for="data-emissao">Data de emissão:</label>
+          <input type="text" id="data-emissao" placeholder="20/02/2025" required>
+        </div>
+        <div class="campo">
+          <label for="local">Local:</label>
+          <input type="text" id="local" placeholder="Digite o local" required>
+        </div>
+      </div>
+
+      <div class="descricao">
+        <textarea id="descricao" placeholder="Descrição completa" rows="20" style="width: 100%; resize: vertical;" required></textarea>
+      </div>
+   </div>
+
+      <div class="bloco-anexos">
+        <div class="botoes-topo">
+          <button class="botao-icone" id="btn-localizacao">
+            <img src="css/img/Pin.png" alt="Localização">
+            <span>Localização</span>
+          </button>
+
+          <button class="botao-icone" id="btn-anexos">
+            <img src="css/img/Vector.png" alt="Anexos">
+            <span>Anexos</span>
+          </button>
+
+          <button class="botao-icone" id="btn-relatorio">
+            <img src="css/img/Report.png" alt="Relatório">
+            <span>Relatório</span>
+          </button>
+        </div>
+
+
+        <div class="conteudo-tabs">
+          <div id="localizacao" class="conteudo-tab">
+            <div id="map"></div>
+            <div id="info">
+              <strong>Endereço:</strong> <span id="endereco">Clique no mapa para buscar</span>
+            </div>
+
+          </div>
+          <div id="anexos" class="conteudo-tab">
+            <div id="mensagem" style="display:none; margin-top: 10px;"></div>
+
+            <div class="menu-dropdown">
+              <div style="display: flex; align-items: center; gap: 10px; width: 100%;">
+                <div class="custom-dropdown" id="dropdown">
+                  <button class="dropdown-btn" onclick="toggleDropdown()">
+                    Evidências Selecionadas<span class="seta">&#9662;</span>
+                  </button>
+                  <div class="dropdown-content" id="lista-evidencias">
+                    </div>
+                </div>
+
+                <input type="file" id="inputEvidencia" multiple style="display: none;">
+                <button class="adicionar" onclick="document.getElementById('inputEvidencia').click()">+ Evidência</button>
+              </div>
+            </div>
+
+            <div class="tabela-evidencias">
+              <table id="tabelaEvidencias">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Arquivo</th>
+                    <th>Download</th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div id="relatorio" class="conteudo-tab">
+            <input type="file" id="inputRelatorio" accept=".pdf,.txt" multiple style="display: none;">
+            <button class="relatorio" onclick="document.getElementById('inputRelatorio').click()">Adicione Relatório</button>
+            
+            <!-- Onde os relatórios vão aparecer -->
+            <div id="lista-relatorios"></div>
+                        
+          </div>
+        </div>
+
+        <button id="btn-salvar-caso" class="salvar">Salvar Caso</button>
+      </div>
+</div>
+
+  <div class="painel-flutuante">
+    <div class="painel-conteudo">
+      <div class="search-bloco">
+        <input type="text" placeholder="Buscar casos...">
+        <span class="icone-filtro">
+          <img src="css/img/filtro.png" alt ="Filtro" class="img-filtro">
+        </span>
+      </div>
+
+      <div class="perfil-bloco">
+        <img src="css/img/foto.png" alt="Perfil" class="icone-perfil">
+        <div class="info">
+          <span class="nome">João Silva</span>
+          <span class="cargo">Administrador</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <script src="js/script.js"></script>
+</body>
+</html>
