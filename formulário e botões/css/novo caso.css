@@ -333,7 +333,7 @@ textarea, input[type="text"] {
 
 }
 
-.relatorio a:hover {
+.relatorio:hover {
   background-color: #F1EFEC;
 }
 
