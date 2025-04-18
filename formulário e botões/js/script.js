@@ -49,7 +49,7 @@
     // === ADICIONAR EVIDÊNCIA (LOCAL) ===
     const inputEvidencia = document.getElementById("inputEvidencia");
     const listaEvidencias = document.getElementById("lista-evidencias");
-    //const mensagemDiv = document.getElementById("mensagem");
+    const mensagemDiv = document.getElementById("mensagem");
     const tabelaEvidenciasBody = document.querySelector("#tabelaEvidencias tbody");
     const evidenciasLocal = [];
   
@@ -82,9 +82,9 @@
           };
           reader.readAsDataURL(file);
   
-        // mensagemDiv.style.display = "block";
-        //mensagemDiv.style.color = "green";
-        //mensagemDiv.textContent = "Evidência adicionada localmente!";
+          mensagemDiv.style.display = "block";
+          mensagemDiv.style.color = "#123458";
+          mensagemDiv.textContent = "Evidência adicionada!";
         });
   
         event.target.value = ''; // Resetar input
