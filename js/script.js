@@ -51,15 +51,29 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-
 // Função para mudar o conteudo do main
 function carregarPagina(pagina) {
+  const main = document.getElementById('main')
   fetch(pagina)
-      .then(response => response.text())
-      .then(data => {
-          document.getElementById('main').innerHTML = data;
-      })
-      .catch(error => console.error('Erro ao carregar página:', error));
+    .then(response => response.text())
+    .then(data => {
+      main.innerHTML = data;
+      if(pagina === 'perfil.html'){
+        main.style.backgroundColor = 'transparent'
+        main.style.border = '0px'
+      } else {
+        main.style.backgroundColor = 'var(--bege-medio)'
+        main.style.border = '1px solid var(--azul)'
+      }
+      // Recarregar os scripts da página carregada
+      const scripts = document.querySelectorAll('script');
+      scripts.forEach(script => {
+        const newScript = document.createElement('script');
+        newScript.src = script.src;
+        document.body.appendChild(newScript);
+      });
+    })
+    .catch(error => console.error('Erro ao carregar página:', error));
 }
 
 // Carregar a página home como padrão ao iniciar

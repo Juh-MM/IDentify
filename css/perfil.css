@@ -1,0 +1,48 @@
+
+  /* Estilo da página de perfil */
+  .perfil-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-height: 350px;
+    margin: auto;
+    padding: 40px;
+    width: 400px;
+    background-color: var(--bege-medio);
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .perfil-container h2 {
+    margin-bottom: 30px;
+    font-size: 24px;
+  }
+  
+  .box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .btn-perfil {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #123458;
+    background-color: #F1EFEC;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  .btn-perfil:hover {
+    background-color: var(--cor-hover);
+  }
+  
+  .btn-perfil.sair {
+    background-color: #ffe5e5;
+    border-color: #ff4d4d;
+    color: #b30000;
+  }
+  
