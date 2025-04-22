@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: #F1EFEC;
+  }
+  
+  .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #123458;
+  }
+
+  .container-casos {    
+    /* Usando grid para fazer o layout 2x2 */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas iguais */
+    gap: 20px; /* Espaçamento entre os blocos */
+    align-items: flex-start;
+    justify-items: stretch; /* Para garantir que os blocos ocupem toda a largura disponível */
+  }
+  
+  /* Ajustes no container do fundo */
+  
+  /* Ajustes nos blocos .ficha-caso */
+  .ficha-caso {
+    background-color: #D4C9BE;
+    border-radius: 12px;
+    border: 1px solid #123458;
+    padding: 20px;
+    font-family: inter, sans-serif;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 300px; /* Garantir altura mínima para cada ficha */
+    flex: 1;
+  }
+  
+  /* Estilo dos campos */
+  .campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  
+  .campo label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #123458;
+  }
+  
+  .campo input {
+    background-color: #f1efec8e;
+    border: 1px solid #123458;
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-size: 14px;
+    color: #123458;
+    font-weight: bold;
+    width: auto;
+  }
+  
+  .linha-campos {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  
+  .linha-campos .campo {
+    flex: 1;
+    min-width: 150px; /* largura mínima para manter responsividade */
+  }
+  
+  .overlay-filtro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: none; /* Escondido por padrão */
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .filtro-conteudo {
+    background-color: #F1EFEC;
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    border: 1px solid #123458;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+
+  .descricao {
+    margin-bottom: 15px;
+    text-align: center;
+    border-radius: 10px;
+    color: #123458;
+}
+.descricao textarea{
+    width: 95%;
+    background-color: var(--branco);
+    outline: none;
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #123458;
+    border-radius: 5px;
+    color: #123458;
+}
+
+  
+  
+  
+  
+  

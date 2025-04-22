@@ -1,11 +1,215 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="img" href="icons/logo.svg">
+  <title>IDentify - Casos</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/casos.css">
 </head>
+
 <body>
+    <header>
+        <div class="painel-conteudo">
+          <img src="icons/identify.svg" alt="">
+          <div class="search-bloco">
+            <input type="text" placeholder="Buscar casos">
+            <img src="icons/filtro.png" alt="">
+          </div>
+        
+            <div class="perfil-bloco">
+              <img src="icons/perito.jpg" alt="Perfil" class="icone-perfil">
+              <div class="info">
+                <span class="nome"><strong>Ana Silva</strong></span>
+                <span class="cargo">Administrador</span>
+              </div>
+            </div>
+        </div>
+      </header>
+
+<div class="container-casos">
+    <div class="ficha-caso">
+      <div class="campo">
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" value="Caso 1" readonly>
+      </div>
     
+      <div class="linha-campos">
+        <div class="campo">
+          <label for="codigo">Código:</label>
+          <input type="text" id="codigo" value="26783651" readonly>
+        </div>
+        <div class="campo">
+          <label for="perito">Perito:</label>
+          <input type="text" id="perito" value="José" readonly>
+        </div>
+      </div>
+      <div class="linha-campos">
+        <div class="campo">
+          <label for="status">Status:</label>
+          <input type="text" id="status" value="Em andamento" readonly>
+        </div>
+        <div class="campo">
+          <label for="data-ocorrencia">Data de ocorrência:</label>
+          <input type="date" id="data-ocorrencia" required>
+        </div>
+      </div>
+      <div class="linha-campos">
+        <div class="campo">
+          <label for="data-emissao">Data de emissão:</label>
+          <input type="date" id="data-emissao" required>
+        </div>
+        <div class="campo">
+          <label for="local">Local:</label>
+          <input type="text" id="local" value="Recife, PE" readonly>
+        </div>
+      </div>
+      <div class="descricao">
+        <label for="descricao-1">Descrição:</label>
+        <textarea id="descricao-1" rows="4" readonly>Breve Descrição</textarea>
+      </div>
+    </div>
+    <!-- Caso 2 -->
+  <div class="ficha-caso">
+    <div class="campo">
+      <label for="titulo-2">Título:</label>
+      <input type="text" id="titulo-2" value="Caso 2" readonly>
+    </div>
+
+    <div class="linha-campos">
+      <div class="campo">
+        <label for="codigo-2">Código:</label>
+        <input type="text" id="codigo-2" value="39827364" readonly>
+      </div>
+      <div class="campo">
+        <label for="perito-2">Perito:</label>
+        <input type="text" id="perito-2" value="Joana" readonly>
+      </div>
+    </div>
+
+    <div class="linha-campos">
+      <div class="campo">
+        <label for="status-2">Status:</label>
+        <input type="text" id="status-2" value="Em anális" readonly>
+      </div>
+      <div class="campo">
+        <label for="data-ocorrencia-2">Data de ocorrência:</label>
+        <input type="date" id="data-ocorrencia-2" required>
+      </div>
+    </div>
+
+    <div class="linha-campos">
+      <div class="campo">
+        <label for="data-emissao-2">Data de emissão:</label>
+        <input type="date" id="data-emissao-2" required>
+      </div>
+      <div class="campo">
+        <label for="local-2">Local:</label>
+        <input type="text" id="local-2" value="Olinda, PE" readonly>
+      </div>
+    </div>
+
+    <div class="descricao">
+      <label for="descricao-2">Descrição:</label>
+      <textarea id="descricao-2" rows="4" readonly>Breve Descrição</textarea>
+    </div>
+  </div>
+
+<!-- Caso 3 -->
+  <div class="ficha-caso">
+    <div class="campo">
+      <label for="titulo-3">Título:</label>
+      <input type="text" id="titulo-3" value="Caso 3" readonly>
+    </div>
+
+    <div class="linha-campos">
+      <div class="campo">
+        <label for="codigo-3">Código:</label>
+        <input type="text" id="codigo-3" value="39827365" readonly>
+      </div>
+      <div class="campo">
+        <label for="perito-3">Perito:</label>
+        <input type="text" id="perito-3" value="Joana" readonly>
+      </div>
+    </div>
+
+    <div class="linha-campos">
+      <div class="campo">
+        <label for="status-3">Status:</label>
+        <input type="text" id="status-3" value="Em anális" readonly>
+      </div>
+      <div class="campo">
+        <label for="data-ocorrencia-3">Data de ocorrência:</label>
+        <input type="date" id="data-ocorrencia-3" required>
+      </div>
+    </div>
+
+    <div class="linha-campos">
+      <div class="campo">
+        <label for="data-emissao-3">Data de emissão:</label>
+        <input type="date" id="data-emissao-3" required>
+      </div>
+      <div class="campo">
+        <label for="local-3">Local:</label>
+        <input type="text" id="local-3" value="Olinda, PE" readonly>
+      </div>
+    </div>
+
+    <div class="descricao">
+      <label for="descricao-3">Descrição:</label>
+      <textarea id="descricao-3" rows="4" readonly>Breve Descrição</textarea>
+    </div>
+  </div>
+
+<!-- Caso 4 -->
+  <div class="ficha-caso">
+    <div class="campo">
+      <label for="titulo-4">Título:</label>
+      <input type="text" id="titulo-4" value="Caso 4" readonly>
+    </div>
+
+    <div class="linha-campos">
+      <div class="campo">
+        <label for="codigo-4">Código:</label>
+        <input type="text" id="codigo-4" value="39827366" readonly>
+      </div>
+      <div class="campo">
+        <label for="perito-4">Perito:</label>
+        <input type="text" id="perito-4" value="Joana" readonly>
+      </div>
+    </div>
+
+    <div class="linha-campos">
+      <div class="campo">
+        <label for="status-4">Status:</label>
+        <input type="text" id="status-4" value="Em anális" readonly>
+      </div>
+      <div class="campo">
+        <label for="data-ocorrencia-4">Data de ocorrência:</label>
+        <input type="date" id="data-ocorrencia-4" required>
+      </div>
+    </div>
+
+    <div class="linha-campos">
+      <div class="campo">
+        <label for="data-emissao-4">Data de emissão:</label>
+        <input type="date" id="data-emissao-4" required>
+      </div>
+      <div class="campo">
+        <label for="local-4">Local:</label>
+        <input type="text" id="local-4" value="Olinda, PE" readonly>
+      </div>
+    </div>
+
+    <div class="descricao">
+      <label for="descricao-4">Descrição:</label>
+      <textarea id="descricao-4" rows="4" readonly>Breve Descrição</textarea>
+    </div>
+  </div>
+  </div>
+  </main>   
+
+<script src="js/script.js"></script>
 </body>
 </html>

@@ -79,7 +79,7 @@ header img{
   align-items: center;     /* Centraliza horizontalmente */
   justify-content: center; /* Centraliza verticalmente */
   gap: 25px;
-  height: 500px;            /* Altura de 65% da tela */
+  height: 65vh;            /* Altura de 65% da tela */
   width: 80px;
 }
 
@@ -112,7 +112,7 @@ main {
   top: 130px;                  /* Ajuste para deixar espaço pro painel */
   left: 160px;                   /* Mesmo left do painel-flutuante */
   width: 79%;
-  height: 84%;
+  height: auto;
   min-height: 71vh;           /* Altura mínima de 71% da tela */
   background-color: var(--bege-medio);
   border-radius: 10px;
