@@ -1,0 +1,17 @@
+:root {
+    --branco: #F1EFEC;
+    --bege-claro: #E3DCD5;
+    --bege-medio: #D4C9BE;
+    --bege-escuro: #f1efec8e;
+    --azul: #123458;
+    --preto: #030303;
+    --font-family: 'inter', sans-serif;
+  }
+  
+body {
+   margin: 0;
+   height: 100vh;
+   background-color: var(--branco);
+}
+  
+  

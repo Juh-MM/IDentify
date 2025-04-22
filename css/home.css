@@ -1,0 +1,74 @@
+  
+  .dashboard {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #123458;
+  }
+  
+  .card {
+    background-color: #f1efec;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #123458;
+    flex: 1 1 260px;
+    min-width: 260px;
+    max-width: 300px;
+  }
+  
+  .card h2 {
+    margin-top: 0;
+  }
+  
+  .badge {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-top: 10px;
+    background-color: #c8d6e5;
+    border-radius: 20px;
+    font-size: 12px;
+    color: #123458;
+  }
+  
+  .badge.danger {
+    background-color: #ff6b6b;
+    color: white;
+  }
+  
+  
+  
+  .graficos-container {
+    display: flex; /* Usando flexbox para alinhamento horizontal */
+    justify-content: space-between; /* Garante que os gráficos fiquem com espaço entre si */
+    gap: 20px; /* Espaço entre os gráficos */
+    padding: 20px;
+  }
+  
+  .grafico {
+    flex: 100%;; /* Faz com que os gráficos ocupem o mesmo espaço disponível */
+    display: flex;
+    justify-content: center; /* Alinha os gráficos no centro do contêiner */
+    align-items: center; /* Alinha os gráficos verticalmente */
+    max-width: 75%; /* Limita a largura máxima de cada gráfico */
+  }
+  
+  canvas {
+    width: 100% !important; /* Faz com que o gráfico ocupe a largura total do contêiner */
+    height: 150px !important; /* Ajuste a altura conforme necessário */
+  }
+  
+  #graficoSimilaridade {
+    width: 280px !important;
+    height: 280px !important;
+  }
+  
+  
+  
+  
+  
+  
+  

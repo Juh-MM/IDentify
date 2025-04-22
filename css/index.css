@@ -1,0 +1,120 @@
+header {
+  position: fixed; /* Fixa o header no topo */
+  top: 25px;
+  left: 50%; /* Posiciona o elemento no meio */
+  transform: translateX(-50%);
+  background-color: var(--bege-medio);
+  padding: 19px;
+  border-radius: 10px;
+  border: 1px solid var(--azul);
+  height: 40px;
+  width: 80%;
+}
+
+header img{
+  height: 2.5rem;
+}
+
+.painel-conteudo {
+  display: flex;
+  gap: 20px; /* Espaço entre os itens */
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-bloco {
+  padding: 10px 15px; /* Padding para o ícone de filtro à direita */
+  width: 95%; /* Faz a barra de pesquisa se ajustar ao tamanho do painel */
+  border-radius: 10px;
+  background-color: var(--bege-escuro);
+  align-items: center;
+}
+
+.search-bloco input{
+  width: 90%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.perfil-bloco {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.8rem;
+  font-family: var(--font-family);
+}
+
+.icone-perfil {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: var(--azul);
+}
+
+
+.menu-lateral {
+  position: fixed;
+  top: 55%;
+  left: 25px; /* 2cm da borda esquerda */
+  transform: translateY(-50%);
+  background-color: var(--bege-medio);
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid var(--azul);
+  display: flex;
+  flex-direction: column; /* links em coluna */
+  align-items: center;     /* Centraliza horizontalmente */
+  justify-content: center; /* Centraliza verticalmente */
+  gap: 25px;
+  height: 500px;            /* Altura de 65% da tela */
+  width: 80px;
+}
+
+.menu-lateral a {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  gap: 3px;
+  padding: 8px;
+  background-color: var(--bege-escuro);
+  font-family: var(--font-family);
+  text-decoration: none;
+  border-radius: 10px;
+  width: 80px;
+  text-align: center;
+}
+
+.menu-lateral a:hover {
+  background-color: var(--branco);
+}
+
+.menu-lateral img.icone {
+  width: 40px;
+  height: 40px;
+}
+
+
+main {
+  position: absolute;
+  top: 130px;                  /* Ajuste para deixar espaço pro painel */
+  left: 160px;                   /* Mesmo left do painel-flutuante */
+  width: 79%;
+  height: 84%;
+  min-height: 71vh;           /* Altura mínima de 71% da tela */
+  background-color: var(--bege-medio);
+  border-radius: 10px;
+  border: 1px solid var(--azul);
+  z-index: 0;
+  padding: 20px;              /* Espaço interno opcional */
+  box-sizing: border-box;
+}
