@@ -50,3 +50,19 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+
+// Função para mudar o conteudo do main
+function carregarPagina(pagina) {
+  fetch(pagina)
+      .then(response => response.text())
+      .then(data => {
+          document.getElementById('main').innerHTML = data;
+      })
+      .catch(error => console.error('Erro ao carregar página:', error));
+}
+
+// Carregar a página home como padrão ao iniciar
+window.onload = function() {
+  carregarPagina('home.html');
+};

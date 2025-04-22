@@ -28,14 +28,21 @@
   </header>
 
   <div class="menu-lateral">
-    <a href="#"><img src="icons/home.png" class="icone" alt="Início">Início</a>
-    <a href="#"><img src="icons/file.png" class="icone" alt="Caso Novo">Novo Caso</a>
-    <a href="#"><img src="icons/folder.png" class="icone" alt="Projetos">Casos</a>
+    <button onclick="carregarPagina('home.html')"
+      id="botaoHome"><img src="icons/home.png" class="icone" alt="Início">home
+    </button>
+
+    <button onclick="carregarPagina('novocaso.html')"
+      id="botaoNovoCaso"><img src="icons/file.png" class="icone" alt="Caso Novo">novocaso
+    </button>
+
+    <button onclick="carregarPagina('casos.html')"
+      id="botaoNovoCaso"><img src="icons/folder.png" class="icone" alt="Projetos">Casos
+    </button>
   </div>
 
-  <main>
-  </main>
+  <main id="main"></main>
 
-  <script src="js/script.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
