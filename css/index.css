@@ -21,6 +21,7 @@ header img{
   width: 100%;
   justify-content: space-between;
   align-items: center;
+  height: 100%;
 }
 
 .search-bloco {
@@ -29,6 +30,8 @@ header img{
   border-radius: 10px;
   background-color: var(--bege-escuro);
   align-items: center;
+  display: flex;
+  height: 25px;
 }
 
 .search-bloco input{
