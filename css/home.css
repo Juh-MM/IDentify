@@ -40,8 +40,6 @@
     color: white;
   }
   
-  
-  
   .graficos-container {
     display: flex; /* Usando flexbox para alinhamento horizontal */
     justify-content: space-between; /* Garante que os gráficos fiquem com espaço entre si */
