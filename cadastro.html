@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/cadastro.css" />
+  <title>IDentify</title>
+</head>
+<body>
+  <div>
+    <header>
+      <img src="icons/identify.svg" alt="" />
+    </header>
+
+    <div class="cadastroContainer">
+      <h2>Cadastro</h2>
+      <form id="cadastroForm" class="form">
+        <!-- Passo 1 -->
+        <div class="passo ativo" id="passo1">
+          <select id="cargo" required>
+            <option value="" disabled selected hidden>Escolha o cargo:</option>
+            <option value="adiministrador">Administrador(a)</option>
+            <option value="perito">Perito(a)</option>
+            <option value="assistente">Assistente(a)</option>
+          </select>
+
+          <input type="text" id="nome" placeholder="Digite o nome completo" required />
+          <input type="number" id="cpf" placeholder="Digite o CPF" required />
+          <input type="email" id="email" placeholder="Digite o E-mail" required />
+
+          <div class="buttonsArea">
+            <button type="button" id="btnProximo1">Próximo</button>
+          </div>
+        </div>
+
+        <!-- Passo 2 -->
+        <div class="passo" id="passo2">
+          <input type="password" id="senha" placeholder="Crie uma senha forte" required />
+          <input type="password" id="confirmarSenha" placeholder="Confirme sua senha" required />
+
+          <div class="buttonsArea">
+            <button type="button" id="btnVoltar1">Voltar</button>
+            <button type="button" id="btnProximo2">Próximo</button>
+          </div>
+        </div>
+
+        <!-- Passo 3 -->
+        <div class="passo" id="passo3">
+          <input type="password" id="senhaAdmin" placeholder="Digite a senha do administrador" required />
+
+          <div class="buttonsArea">
+            <button type="button" id="btnVoltar2">Voltar</button>
+            <button type="submit">Finalizar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <a href="#">Esqueceu sua senha?</a>
+  </div>
+
+  <!-- Script externo -->
+  <script src="js/cadastro.js"></script>
+</body>
+</html>
