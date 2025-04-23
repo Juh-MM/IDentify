@@ -11,10 +11,6 @@ header {
   width: 80%;
 }
 
-header img{
-  height: 2.5rem;
-}
-
 .painel-conteudo {
   display: flex;
   gap: 20px; /* Espaço entre os itens */
@@ -79,7 +75,7 @@ header img{
   align-items: center;     /* Centraliza horizontalmente */
   justify-content: space-evenly; /* Centraliza verticalmente */
   gap: 25px;
-  height: 50%;            /* Altura de 65% da tela */
+  height: 65vh;            /* Altura de 65% da tela */
   width: 80px;
 }
 
