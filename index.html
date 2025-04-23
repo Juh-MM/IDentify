@@ -6,11 +6,13 @@
   <link rel="icon" type="img" href="icons/logo.svg">
   <title>IDentify</title>
   <link rel="stylesheet" href="css/global.css">
-<script>navigator.serviceWorker.register("service-worker.js")</script> 
-<link rel="manifest" href="manifest.json" />  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/index.css">
+  <li nk rel="manifest" href="manifest.json" />  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
+
   <header>
     <div class="painel-conteudo">
       <img src="icons/identify.svg" alt="">
@@ -43,8 +45,13 @@
     </button>
   </div>
 
-  <main id="main"></main>
+  <main id="main">
+    <!-- conteudo aparece aqui -->
+  </main>
 
 <script src="js/script.js"></script>
+
+<script>navigator.serviceWorker.register("service-worker.js")</script> 
+
 </body>
 </html>

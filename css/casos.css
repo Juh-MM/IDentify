@@ -1,9 +1,4 @@
-body {
-    margin: 0;
-    height: 100vh;
-    background-color: #F1EFEC;
-  }
-  
+
   .info {
     display: flex;
     flex-direction: column;
@@ -112,9 +107,3 @@ body {
     border-radius: 5px;
     color: #123458;
 }
-
-  
-  
-  
-  
-  

@@ -1,4 +1,6 @@
-  .dashboard {
+
+
+.dashboard {
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -64,10 +66,4 @@
     width: 280px !important;
     height: 280px !important;
   }
-  
-  
-  
-  
-  
-  
   

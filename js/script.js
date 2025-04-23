@@ -1,3 +1,34 @@
+
+// Função para mudar o conteudo do main
+function carregarPagina(pagina) {
+  fetch(pagina)
+    .then(response => response.text())
+    .then(html => {
+      const main = document.getElementById('main');
+      main.innerHTML = html;
+
+      // Pega todos os scripts dentro do HTML injetado
+      const scripts = main.querySelectorAll("script");
+      scripts.forEach(oldScript => {
+        const newScript = document.createElement("script");
+        // Copia atributos e conteúdo
+        if (oldScript.src) {
+          newScript.src = oldScript.src;
+        } else {
+          newScript.textContent = oldScript.textContent;
+        }
+        document.body.appendChild(newScript); // Executa o script
+      });
+    });
+}
+
+// Carregar a página home como padrão ao iniciar
+window.onload = function() {
+  carregarPagina('home.html');
+};
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
   // === GRÁFICO DE SIMILARIDADE (DOUGHNUT) ===
   const ctxSimilaridade = document.getElementById('graficoSimilaridade')?.getContext('2d');
@@ -50,19 +81,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
-
-
-// Função para mudar o conteudo do main
-function carregarPagina(pagina) {
-  fetch(pagina)
-      .then(response => response.text())
-      .then(data => {
-          document.getElementById('main').innerHTML = data;
-      })
-      .catch(error => console.error('Erro ao carregar página:', error));
-}
-
-// Carregar a página home como padrão ao iniciar
-window.onload = function() {
-  carregarPagina('home.html');
-};
