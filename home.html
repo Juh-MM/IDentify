@@ -9,6 +9,23 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+    <header>
+        <div class="painel-conteudo">
+            <img src="icons/identify.svg" alt="">
+            <div class="search-bloco">
+                <input type="text" placeholder="Buscar casos">
+                <img src="icons/filtro.png" alt="">
+            </div>
+            <div class="perfil-bloco" onclick="carregarPagina('perfil.html')">
+                <img src="icons/perito.jpg" alt="Perfil" class="icone-perfil">
+                <div class="info">
+                    <span class="nome"><strong>Ana Silva</strong></span>
+                    <span class="cargo">Administrador</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
     <div class="dashboard">
         <div class="card">
           <h1>Casos Concluídos vs Não Concluídos</h1>
